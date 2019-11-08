@@ -17,8 +17,9 @@ export class ArticleService{
     }
 
 
-    pruebas(){
-        return "soy el servicio de articulos!!!";
+    pruebas():Observable<any>{
+        //return "soy el servicio de articulos!!!";
+        return this._http.get(this.url+'values/5');
     }
 
     getArticles(last:any = null):Observable<any>{
